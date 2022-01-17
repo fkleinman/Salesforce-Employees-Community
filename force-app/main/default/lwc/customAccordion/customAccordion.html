@@ -1,0 +1,36 @@
+<template>
+    <ul class="slds-accordion">
+        <li class="slds-accordion__list-item width-content">
+          <section class="slds-accordion__section">
+            <div class="slds-accordion__summary">
+                <template if:true={isCollapsed}>  
+                    <p class="slds-accordion__summary-heading slds-truncate">
+                        <button aria-controls="accordion-details-01" 
+                                aria-expanded="true" 
+                                class="slds-button slds-button_reset slds-accordion__summary-action tooltip" 
+                                onclick={handleClick}>
+                        <span class="slds-accordion__summary-content">
+                            <lightning-formatted-rich-text
+                            value={projectInformation}
+                        ></lightning-formatted-rich-text>
+                        </span>
+                        </button>
+                    </p>
+                </template>
+                <p class="slds-accordion__summary-heading">
+                    <button aria-controls="accordion-details-01" 
+                            aria-expanded="true" 
+                            class="slds-button slds-button_reset slds-accordion__summary-action" 
+                            onclick={handleClick}>
+                        <span class={cssClass}>
+                            <lightning-formatted-rich-text
+                            value={projectInformation}
+                        ></lightning-formatted-rich-text>
+                        </span>
+                    </button>
+                </p>
+            </div>
+          </section>
+        </li>
+    </ul>
+</template>

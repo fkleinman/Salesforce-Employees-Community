@@ -1,0 +1,21 @@
+
+.slds-tabs--default__nav{
+   background-color: #FCFCFC !important;
+}
+
+.slds-is-active .slds-tabs--default__link{
+    background-color: #FFFFFF !important;
+}
+
+.slds-tabs--default__link:focus {
+    text-decoration: none; 
+}
+
+.slds-tabs--default__link a{
+    font-size: 13px;
+    color: #3E3E3C
+}
+
+.slds-tabs--default {
+    margin-top: -60px !important;
+}    

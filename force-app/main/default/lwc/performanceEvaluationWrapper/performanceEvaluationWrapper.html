@@ -1,0 +1,44 @@
+<template>
+    <p if:true={spinnerOn}>
+        <lightning-spinner size="medium"></lightning-spinner>
+    </p>
+    <lightning-card>
+        <h3 slot="title">
+        </h3>
+        <div>
+            <div class="slds-grid slds-wrap">
+                <div class="slds-col slds-size_4-of-12 image-containter">
+                    <lightning-formatted-rich-text value={image}></lightning-formatted-rich-text>
+                </div>
+                <div class="slds-col slds-size_8-of-12 employee-data">
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-grid slds-size_12-of-12 dataContainer font18">                                                       
+                            <b class="employeeName">{evaluated}</b>
+                        </div>
+                    </div>
+                    <div class="slds-grid slds-wrap">
+                        <div class="slds-col slds-grid slds-size_12-of-12 dataContainer font18">  
+                            <b class="employedata">Performance Evaluation</b>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <c-evaluated-kpi review-id={recordId} is-review-open={reviewOpen}></c-evaluated-kpi>
+        <c-review-plan-items review-id={recordId} isreviewopen={reviewOpen}></c-review-plan-items>
+        <c-review-comments id-review={recordId} open={reviewOpen} onneedupdate={saved}></c-review-comments>
+        
+        <div slot="footer">
+            <lightning-button-group>
+                <template if:true={reviewOpen}>
+                    <lightning-button label="Back" onclick={handleClick} ></lightning-button>
+                    <lightning-button label="Save" onclick={saveComments}></lightning-button>
+                    <lightning-button variant="brand" label="Submit Review" onclick={handleSubmit}></lightning-button>
+                </template>
+                <template if:false={reviewOpen}>
+                    <lightning-button label="Back" onclick={handleClick}></lightning-button>
+                </template>
+            </lightning-button-group>
+        </div>
+    </lightning-card>
+</template>

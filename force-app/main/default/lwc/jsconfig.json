@@ -1,0 +1,43 @@
+{
+    "compilerOptions": {
+        "experimentalDecorators": true,
+        "baseUrl": ".",
+        "paths": {
+            "c/employeeCareerPathSubtab": [
+                "employeeCareerPathSubtab/employeeCareerPathSubtab.js"
+            ],
+            "c/employeeOverallSubtab": [
+                "employeeOverallSubtab/employeeOverallSubtab.js"
+            ],
+            "c/employeePerformanceEvaluationsSubtab": [
+                "employeePerformanceEvaluationsSubtab/employeePerformanceEvaluationsSubtab.js"
+            ],
+            "c/employeeProjectsSubtab": [
+                "employeeProjectsSubtab/employeeProjectsSubtab.js"
+            ],
+            "c/employeeStatusSubtab": [
+                "employeeStatusSubtab/employeeStatusSubtab.js"
+            ],
+            "c/employeeTab": [
+                "employeeTab/employeeTab.js"
+            ],
+            "c/mainTabset": [
+                "mainTabset/mainTabset.js"
+            ]
+        }
+    },
+    "include": [
+        "**/*",
+        "../../../../.sfdx/typings/lwc/**/*.d.ts"
+    ],
+    "typeAcquisition": {
+        "include": [
+            "jest"
+        ]
+    },
+    "paths": {
+        "c/*": [
+            "*"
+        ]
+    }
+}
